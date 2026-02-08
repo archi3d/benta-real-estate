@@ -33,32 +33,36 @@ const steps = [
 
 export function createSellingProcess() {
   return `
-    <section class="max-w-7xl mx-auto px-8 py-24 text-center">
-      <span class="inline-block px-4 py-1.5 bg-gray-50 border border-gray-200 rounded-full text-sm text-gray-400 font-medium mb-8">
+    <section class="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24 text-center">
+      <span class="inline-block px-4 py-1.5 bg-gray-50 border border-gray-200 rounded-full text-[10px] md:text-sm text-gray-400 font-bold tracking-widest uppercase mb-8">
         Sell Your Home
       </span>
-      <h2 class="text-6xl font-bold text-[#1a1a1a] mb-6">How the Selling Process Works</h2>
-      <p class="text-xl text-gray-500 max-w-2xl mx-auto mb-12">
+      
+      <h2 class="text-3xl md:text-6xl font-bold text-[#1a1a1a] mb-6 tracking-tight">
+        How the Selling Process Works
+      </h2>
+      
+      <p class="text-base md:text-xl text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">
         We guide you through each stage, from valuation to closing, ensuring a smooth, transparent, and rewarding selling experience.
       </p>
       
-      <a href="/sellers" class="nav-link bg-[#1a1a1a] text-white px-8 py-4 rounded-xl font-semibold mb-20 hover:bg-black transition-all flex items-center justify-center gap-2 mx-auto w-fit">
+      <a href="/sellers" class="nav-link bg-[#1a1a1a] text-white px-8 py-4 rounded-xl font-bold mb-16 hover:bg-black transition-all active:scale-95 flex items-center justify-center gap-2 mx-auto w-full sm:w-fit shadow-lg shadow-black/5">
         Get Your Home Listed <span class="text-xs">→</span>
       </a>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 text-left">
         ${steps.map(step => `
-          <div class="p-10 border border-gray-100 rounded-[40px] hover:border-gray-300 transition-all duration-300 group">
-            <span class="text-4xl font-bold text-[#1a1a1a] block mb-8">${step.id}</span>
+          <div class="p-8 md:p-10 border border-gray-100 rounded-[32px] md:rounded-[40px] hover:border-gray-300 transition-all duration-300 group">
+            <span class="text-3xl md:text-4xl font-bold text-[#1a1a1a] block mb-6 md:mb-8">${step.id}</span>
             <div class="mb-6">
-               <div class="w-12 h-12 flex items-center justify-center">
+               <div class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400 group-hover:text-black transition-colors">
                     ${step.icon}
                   </svg>
                </div> 
             </div>
-            <h3 class="text-2xl font-bold text-[#1a1a1a] mb-4">${step.title}</h3>
-            <p class="text-gray-500 leading-relaxed text-lg">${step.desc}</p>
+            <h3 class="text-xl md:text-2xl font-bold text-[#1a1a1a] mb-3 md:mb-4">${step.title}</h3>
+            <p class="text-gray-500 leading-relaxed text-base md:text-lg">${step.desc}</p>
           </div>
         `).join('')}
       </div>
@@ -69,8 +73,8 @@ export function createSellingProcess() {
 // src/components/Testimonial.js
 export function createTestimonial() {
   return `
-    <section class="max-w-7xl mx-auto px-8 py-20">
-      <div class="w-full h-150 overflow-hidden rounded-[40px] mb-16 shadow-xl">
+    <section class="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-20">
+      <div class="w-full h-64 md:h-[500px] overflow-hidden rounded-[32px] md:rounded-[40px] mb-12 md:mb-16 shadow-2xl">
         <img 
           src="https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
           alt="Luxury Kitchen Interior" 
@@ -78,10 +82,10 @@ export function createTestimonial() {
         />
       </div>
 
-      <div class="flex flex-col md:flex-row items-center justify-between gap-12 border-t border-gray-100 pt-16">
+      <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 md:gap-12 border-t border-gray-100 pt-12 md:pt-16">
         
-        <blockquote class="md:w-2/3">
-          <p class="text-3xl md:text-4xl font-medium leading-tight text-[#1a1a1a]">
+        <blockquote class="lg:w-2/3">
+          <p class="text-2xl md:text-4xl font-medium leading-tight text-[#1a1a1a] tracking-tight">
             "Benta sets a new benchmark for real estate marketing, their process combines precision, creativity, and trust in every stage. A truly modern approach to selling high-end properties."
           </p>
         </blockquote>
@@ -90,11 +94,11 @@ export function createTestimonial() {
           <img 
             src="https://i.pravatar.cc/150?u=laura" 
             alt="Laura Bennett" 
-            class="w-16 h-16 rounded-full object-cover"
+            class="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover ring-2 ring-gray-50"
           />
           <div>
-            <h4 class="text-xl font-bold text-[#1a1a1a]">Laura Bennett</h4>
-            <p class="text-gray-500">Partnership Director, PropertyGlobal</p>
+            <h4 class="text-lg md:text-xl font-bold text-[#1a1a1a]">Laura Bennett</h4>
+            <p class="text-sm md:text-base text-gray-500">Partnership Director, PropertyGlobal</p>
           </div>
         </div>
 
